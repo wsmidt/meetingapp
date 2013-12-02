@@ -1,0 +1,39 @@
+div(ng-controller="ResponseController")
+  div(style="padding-left:10px; background-color:#E1EEFF; height:35px;")
+    span Contact:
+    span {{selectedContact.name}}: {{selectedContact.email}}
+
+  div(style="overflow:auto; height:420px; width:380px")
+    div(ng-repeat="day in days", style="height:50px;")
+      div(style="padding-left:12.5px; width:25px; display:inline-block;") {{day.date}}
+      div(style="background-color:#FFE2BD; padding:5px; display:inline-block; width:100px", ngc-rand-border-color)
+        div {{day.day}}
+        div(style="background-color:#FFFFFF; height:10px;")
+  
+    div(style="position:absolute; top:35px; left:20px; height:375px; width:370px; background-color: rgba(0,0,0,0.8); color:white; z-index:7777")
+      div(style="padding-top:50px;")
+        p(style="text-align:center;")
+          | Schedualing Meeting with {{selectedContact.name}}!
+        p(style="text-align:center; padding-top:265px;")
+          | Does this suggested time work for you?
+
+  div(style="position:relative; top:-50px; left:0; height:45px; width:360px; border-style:solid; border-width:5px; border-color:black")
+    div(style="float:right; padding:5px;")
+      span(ng-show="yesSelected", style="padding-right:50px;")
+        i(style="color:green").icon-check-sign
+      span(ng-show="yesSelected == false", style="padding-right:50px;")
+        i(style="color:red").icon-minus-sign
+      .btn-group(style="padding-right:5px;")
+        button.btn(btn-checkbox, ng-click="yesSelected = true") Yes
+        button.btn(btn-checkbox, ng-click="yesSelected = false") No
+      a.btn(ng-click="selectNext()") Next
+
+  div(ng-show="isThinking", style="position:absolute; top:0; left:20px; width:364px; height:350px; background-color:white; padding-top:100px; border-style:solid; border-size:1px; border-color:black;z-index:8888")
+    p(style="text-align:center;") Arbitrating your meeting!...
+    br
+    p(style="text-align:center;") Sending request, please wait :)
+
+
+
+
+    

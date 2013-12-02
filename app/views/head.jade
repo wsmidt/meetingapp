@@ -1,0 +1,73 @@
+//TODO [wsmidt] clean this shit up! dont need mst of these!!!
+head 
+  base(href="/")
+  title="MeetingApp"
+
+  link(rel='stylesheet',href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css')
+  link(rel='stylesheet', href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css')
+  link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css')
+
+  script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js')
+
+
+  //TODO [wsmidt] prolly dont need all these! clean this up!
+  script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular.js')
+  script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular-route.min.js')
+  script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular-resource.min.js')
+  script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular-cookies.min.js')
+  script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular-sanitize.min.js')
+  script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular-resource.min.js')
+  script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular-animate.min.js')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js')
+  script(src='//crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js')
+  script(src='//cdn.jsdelivr.net/restangular/latest/restangular.min.js')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.0/angular-ui-router.min.js')
+
+  //TODO [wsmidt] might want to use some of these... nmeed to cleanup!
+  //script(src='/assets/javascripts/angular-ui-utils.min.js')
+  //script(src='/assets/javascripts/ui-bootstrap-0.7.0.min.js')
+  //script(src='/assets/javascripts/ui-bootstrap-tpls-0.7.0.min.js')
+  //script(src='/assets/javascripts/jquery.timeago.min.js')
+  //script(src='/assets/javascripts/spin.min.js')
+  //script(src='/assets/javascripts/highcharts-3.0.6.min.js')
+  //script(src='/assets/javascripts/ng-infinite-scroll-1.0.0.min.js')
+  //script(src='/assets/javascripts/promise-tracker.js')
+  //script(src='/assets/javascripts/angular-cache.min.js')
+  //script(src='/assets/javascripts/marked.js')
+  
+  // Nice to be able to use a debugger in Dev mode.
+  // TODO: change this to a for loop that adds the .min extension
+  // in prod so that we don't have quite so much duplicated code
+  if mode == 'Dev'
+    script(src='/assets/javascripts/meetingapp.js')
+
+    // Include services
+    //script(src='/assets/javascripts/services/authService.js')
+
+    // Now for the controllers
+    script(src='/assets/javascripts/appController.js')
+    script(src='/assets/javascripts/initiateController.js')
+    script(src='/assets/javascripts/responseController.js')
+
+    // And the rest of the stuff
+    script(src='/assets/javascripts/meetingAppDirectives.js')
+    //link(href='/assets/stylesheets/meetingapp.css',rel='stylesheet')
+  else
+
+    script(src='/assets/javascripts/meetingapp.min.js')
+    
+    // Include services
+    //script(src='/assets/javascripts/services/authService.min.js')
+
+    // Now for the controllers
+    script(src='/assets/javascripts/appController.min.js')
+    script(src='/assets/javascripts/initiateController.min.js')
+    script(src='/assets/javascripts/responseController.min.js')
+
+    script(src='/assets/javascripts/meetingAppDirectives.min.js')
+    //link(href='/assets/stylesheets/meetingapp.min.css',rel='stylesheet')
+
+  link(rel="shortcut icon",href="/assets/images/favicon.ico")
+

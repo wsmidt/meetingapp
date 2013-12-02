@@ -1,0 +1,7 @@
+doctype 5
+html(lang="en", ng-app='meetingApp')
+  include head.jade
+  block head
+
+  body(ng-controller="AppController")
+    div(ui-view="appView")
