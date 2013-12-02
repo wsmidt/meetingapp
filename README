@@ -1,4 +1,2 @@
-This is your new Play 2.1 application
-=====================================
-
-This file will be packaged with your application, when using `play dist`.
+to play the mock, simply use the play framework:
+play run
